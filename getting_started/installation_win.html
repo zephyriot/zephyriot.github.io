@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Development Environment Setup on Windows &mdash; Zephyr Project Documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Zephyr Project Documentation" href="../index.html"/>
+        <link rel="up" title="Getting Started Guide" href="getting_started.html"/>
+        <link rel="next" title="Supported Boards" href="../boards/boards.html"/>
+        <link rel="prev" title="Development Environment Setup on Mac OS" href="installation_mac.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Zephyr Project
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.6.99
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="getting_started.html#set-up-the-development-environment">Set Up the Development Environment</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="installation_linux.html">Development Environment Setup on Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation_mac.html">Development Environment Setup on Mac OS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Development Environment Setup on Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#update-your-operating-system">Update Your Operating System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installing-requirements-and-dependencies">Installing Requirements and Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="getting_started.html#checking-out-the-source-code-anonymously">Checking Out the Source Code Anonymously</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#building-and-running-an-application">Building and Running an Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/kernel.html">Zephyr Kernel Primer (version 2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../application/application.html">Application Development Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../drivers/drivers.html">Device Drivers and Device Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../subsystems/subsystems.html">Subsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../samples/samples.html">Samples and Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/code.html">Contributing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LICENSING.html">Licensing of Zephyr Project components</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Zephyr Project</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="getting_started.html">Getting Started Guide</a> &raquo;</li>
+      
+    <li>Development Environment Setup on Windows</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/getting_started/installation_win.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="development-environment-setup-on-windows">
+<span id="installing-zephyr-win"></span><h1>Development Environment Setup on Windows</h1>
+<p>This section describes how to configure your development environment and
+to build Zephyr applications in a Microsoft Windows environment.</p>
+<p>This guide was tested by compiling and running the Zephyr&#8217;s sample
+applications on the following Windows version:</p>
+<ul class="simple">
+<li>Windows 8.1</li>
+</ul>
+<div class="section" id="update-your-operating-system">
+<h2>Update Your Operating System</h2>
+<p>Before proceeding with the build, ensure that you are running your
+Windows system with the latest updates installed.</p>
+</div>
+<div class="section" id="installing-requirements-and-dependencies">
+<span id="windows-requirements"></span><h2>Installing Requirements and Dependencies</h2>
+<p>To install the software components required to build Zephyr applications on
+Windows, you will need to build or install a toolchain.</p>
+<p>Install <strong class="program">GIT</strong>. Go to <a class="reference external" href="https://git-scm.com/download/win">GIT Download</a> to obtain the latest copy of
+the software.</p>
+<p>Install <strong class="program">Python 2.7</strong>. Go to <a class="reference external" href="https://www.python.org/downloads/">Python Download</a> to obtain the 2.7
+version of the software.</p>
+<p>Install <strong class="program">MinGW</strong>. MinGW is the minimalist GNU development environment
+for native Windows applications. The Zephyr build system will execute on top of
+this tool set.</p>
+<p>To install <strong class="program">MinGW</strong>, visit the site <a class="reference external" href="http://www.mingw.org/">MinGW Home</a> and install the
+following packages with their installler <cite>mingw-get-setup.exe</cite>:</p>
+<ul class="simple">
+<li>mingw-developer-toolkit</li>
+<li>mingw32-base</li>
+<li>msys-base</li>
+<li>msys-binutils</li>
+<li>msys-console</li>
+<li>msys-w32api</li>
+</ul>
+<p>Launch the <cite>MSYS console</cite>. The installer does not create shortcuts for you,
+but the script to launch it is in <code class="file docutils literal"><span class="pre">C:\MinGW\msys\1.0\msys.bat.</span></code>.
+We need the following line in <code class="file docutils literal"><span class="pre">/etc/fstab</span></code>:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span>Win32_Path     Mount_Point
+<span class="go">c:/mingw             /mingw</span>
+</pre></div>
+</div>
+<p>The easiest way to do this is just copy the file <code class="file docutils literal"><span class="pre">fstab.sample</span></code> as
+<code class="file docutils literal"><span class="pre">fstab</span></code> and confirm that the these lines are in the new
+<code class="file docutils literal"><span class="pre">fstab</span></code> file.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cp /etc/fstab.sample /etc/fstab
+<span class="gp">$</span> cat /etc/fstab
+</pre></div>
+</div>
+<p>Configure Python&#8217;s folder location in the environmental variable <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal"><span class="pre">PATH</span></code>
+and the installation path for MinGW.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The format of the path for <cite>PYTHON_PATH</cite> must to be in the
+linux format. Default installation is in <code class="file docutils literal"><span class="pre">C:\python27</span></code>,
+which would be written as <code class="file docutils literal"><span class="pre">/c/python27/</span></code>.</p>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">export PYTHON_PATH=/c/python27</span>
+<span class="go">export PATH=$PATH:${PYTHON_PATH}</span>
+<span class="go">export MINGW_DIR=/c/MinGW</span>
+</pre></div>
+</div>
+<div class="section" id="pthread-library">
+<h3>Pthread library</h3>
+<p>The Zephyr OS build process has a dependency on the Pthread library.
+The required packages for Msys installation would normally provide it.
+However, if a minimal installation fails to provide the Pthread library,
+it can be installed with the following command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">mingw-get install libpthread</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gnu-regex-c-library">
+<h3>GNU Regex C library</h3>
+<p>The Zephyr build process has a dependency with the GNU regex library.
+Msys provides its own GNU library implementation that can be downloaded from the
+MinGW and Msys official repository:<a class="reference external" href="http:sourceforge.net/projects/mingw/files/">MinGW Repository</a>.
+Install the library from the Msys console interface with the following commands:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">mingw-get update</span>
+<span class="go">mingw-get install msys-libregex-dev --all-related</span>
+</pre></div>
+</div>
+<p>Update the following environment variables on your system to allow the C compiler
+and linker to find the library and headers:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">export LIBRARY_PATH=$LIBRARY_PATH:/c/mingw/msys/1.0/lib</span>
+<span class="go">export C_INCLUDE_PATH=$C_INCLUDE_PATH:/c/mingw/msys/1.0/include</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="toolchain-installation">
+<h3>Toolchain Installation</h3>
+<p>The build system should be able to work with any toolchain installed in your system.</p>
+<p>For instance, the Zephyr build system was tested with the toolchain provided with
+the ISSM 2016 (Intel System Studio for Microcontrollers) installation.</p>
+<p>To install ISSM use the link provided to download from the Intel Developer Zone:
+<a class="reference external" href="https://software.intel.com/en-us/intel-system-studio-microcontrollers">ISSM 2016 Download</a> and install it into your system.</p>
+<p>Finally, configure your environment variables for the ISSM 2016 toolchain.
+For example, using the default installation path for ISSM:
+<code class="file docutils literal"><span class="pre">C:/IntelSWTools/ISSM_2016</span></code></p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">export ZEPHYR_GCC_VARIANT=issm</span>
+<span class="go">export ISSM_INSTALLATION_PATH=C:/IntelSWTools/ISSM_2016</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The format of the location for the ISSM installation directory
+(e.g. <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal"><span class="pre">ISSM_INSTALLATION_PATH</span></code>) must be in the windows format.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../boards/boards.html" class="btn btn-neutral float-right" title="Supported Boards" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation_mac.html" class="btn btn-neutral" title="Development Environment Setup on Mac OS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Intel Corporation, Wind River Systems, Inc.
+      Last updated on Jan 26, 2017.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.6.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

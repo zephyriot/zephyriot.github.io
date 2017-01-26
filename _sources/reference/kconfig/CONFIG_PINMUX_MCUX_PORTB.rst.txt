@@ -1,0 +1,41 @@
+:orphan:
+
+.. title:: PINMUX_MCUX_PORTB
+
+.. option:: CONFIG_PINMUX_MCUX_PORTB:
+.. _CONFIG_PINMUX_MCUX_PORTB:
+
+Enable Port B.
+
+
+
+:Symbol:           PINMUX_MCUX_PORTB
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Port B"
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: (none)
+ *  y (value: "y")
+ *   Condition: UART_MCUX_0 (value: "n")
+ *  y (value: "y")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ PINMUX_MCUX && BOARD_FRDM_K64F (value: "n")
+:Locations:
+ * ../drivers/pinmux/Kconfig.mcux:28
+ * ../boards/arm/hexiwear_k64/Kconfig.defconfig:52
+ * ../boards/arm/frdm_k64f/Kconfig.defconfig:52

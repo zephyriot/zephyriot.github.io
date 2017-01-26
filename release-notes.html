@@ -1,0 +1,620 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Release Notes &mdash; Zephyr Project Documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Zephyr Project Documentation" href="index.html"/>
+        <link rel="next" title="Licensing of Zephyr Project components" href="LICENSING.html"/>
+        <link rel="prev" title="Contributing Code" href="contribute/code.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Zephyr Project
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.6.99
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction/introducing_zephyr.html">Introducing Zephyr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/getting_started.html">Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boards/boards.html">Supported Boards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel/kernel.html">Zephyr Kernel Primer (version 2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application/application.html">Application Development Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="porting/porting.html">Porting Guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drivers/drivers.html">Device Drivers and Device Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="subsystems/subsystems.html">Subsystems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samples/samples.html">Samples and Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/kconfig/index.html">Configuration Options Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/code.html">Contributing Code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zephyr-kernel-1-6-0">Zephyr Kernel 1.6.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kernel">Kernel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#architectures">Architectures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boards">Boards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#drivers-and-sensors">Drivers and Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#networking">Networking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bluetooth">Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-infrastructure">Build Infrastructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#libraries">Libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hals">HALs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-and-samples">Test and Samples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deprecations">Deprecations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jira-related-items">JIRA Related Items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#known-issues">Known Issues</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSING.html">Licensing of Zephyr Project components</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Zephyr Project</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Release Notes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/release-notes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="release-notes">
+<h1>Release Notes</h1>
+<div class="section" id="zephyr-kernel-1-6-0">
+<span id="zephyr-1-6"></span><h2>Zephyr Kernel 1.6.0</h2>
+<p>We are pleased to announce the release of Zephyr kernel version 1.6.0. This
+release introduces a the unified Kernel replacing the separate nano- and
+micro-kernels and simplifying the overall Zephyr architecture and programming
+interfaces.
+Support for the ARM Cortex-M0/M0+ family was added and board support for
+Cortex-M was expanded.
+Additionally, this release adds many improvements for documentation, build
+infrastructure, and testing.</p>
+<p>Major enhancements included with the release:</p>
+<ul class="simple">
+<li>Introduced the Unified Kernel; the nano and micro kernel were removed.</li>
+<li>The legacy API is still supported but deprecated.</li>
+<li>Legacy tests and samples were moved to tests/legacy and samples/legacy.</li>
+<li>Unified kernel documentation was added and legacy nanokernel/microkernel
+documentation was removed.</li>
+<li>Added support for several ARM Cortex-M boards</li>
+<li>Added support for USB mass storage and access to the filesystem.</li>
+<li>Added native Bluetooth Controller support. Currently nRF51 &amp; nRF52 are supported.</li>
+</ul>
+<p>A detailed list of changes since v1.5.0 by component follows:</p>
+<div class="section" id="kernel">
+<h3>Kernel</h3>
+<ul class="simple">
+<li>Introduced the unified kernel.</li>
+<li>Removed deprecated Tasks IRQs.</li>
+<li>Removed deprecated dynamic interrupt API.</li>
+<li>Added DLIST to operate in all elements of a doubly-linked list.</li>
+<li>SLIST: Added sys_slist_get() to fetch and remove the head, also Added
+append_list and merge_slist.</li>
+<li>Added nano_work_pending to check if it is pending execution.</li>
+<li>Unified: Added support for k_malloc and k_free.</li>
+<li>Renamed kernel objects event to alert and memory map to memory slab.</li>
+<li>Changed memory pool, memory maps, message queues and event handling APIs.</li>
+</ul>
+</div>
+<div class="section" id="architectures">
+<h3>Architectures</h3>
+<ul class="simple">
+<li>ARC: Removed CONFIG_TIMER0_CLOCK_FREQ.</li>
+<li>ARC: Unified linker scripts.</li>
+<li>ARC: Removed dynamic interrupts.</li>
+<li>ARM: Added choice to use floating point ABI.</li>
+<li>ARM: Added NXP Kinetis kconfig options to configure clocks.</li>
+<li>ARM: Removed dynamic interrupts and exceptions.</li>
+<li>ARM: Atmel: Added constants and structures for watchdog registers.</li>
+<li>ARM: Added support for ARM Cortex-M0/M0+.</li>
+<li>x86: Removed dynamic interrupts and exceptions.</li>
+<li>x86: Declared internal API for interrupt controllers.</li>
+<li>x86: Changed IRQ controller to return -1 if cannot determine source vector.</li>
+<li>x86: Grouped Quark SoC&#8217;s under intel_quark family.</li>
+<li>x86: Optimized and simplified IRQ and exception stubs.</li>
+</ul>
+</div>
+<div class="section" id="boards">
+<h3>Boards</h3>
+<ul class="simple">
+<li>Renamed board Quark SE devboard to Quark SE C1000 devboard.</li>
+<li>Renamed board Quark SE SSS devboard to Quark SE C1000 SS devboard.</li>
+<li>Quark SE C1000: Disabled IPM and enabled UART0 on the Sensor SubSytem.</li>
+<li>Removed basic_cortex_m3 and basic_minuteia boards.</li>
+<li>Arduino 101: Removed backup/restore scripts. To restore original bootloader
+use flashpack utility instead.</li>
+<li>Renamed nRF52 Nitrogen to 96Boards Nitrogen.</li>
+<li>Added ARM LTD Beetle SoC and V2M Beetle board.</li>
+<li>Added Texas Instruments CC3200 LaunchXL support.</li>
+<li>Added support for Nordic Semiconductor nRF51822.</li>
+<li>Added support for NXP Hexiwear board.</li>
+</ul>
+</div>
+<div class="section" id="drivers-and-sensors">
+<h3>Drivers and Sensors</h3>
+<ul class="simple">
+<li>SPI: Fixed typos in SPI port numbers.</li>
+<li>Pinmux: Removed Quark dev unused file.</li>
+<li>I2C: Added KSDK shim driver.</li>
+<li>Ethernet: Added KSDK shim driver.</li>
+<li>Flash: Added KSDK shim driver</li>
+<li>I2C: Changed config parameters to SoC specific.</li>
+<li>QMSI: Implemented suspend and resume functions QMSI shim drivers</li>
+<li>Added HP206C sensor.</li>
+<li>Changed config_info pointers to const.</li>
+<li>Added support for SoCWatch driver.</li>
+<li>Added FXOS8700 accelerometer / magnetometer sensor driver.</li>
+</ul>
+</div>
+<div class="section" id="networking">
+<h3>Networking</h3>
+<ul class="simple">
+<li>Minor fixes to uIP networking stack (This will be deprecated in 1.7)</li>
+</ul>
+</div>
+<div class="section" id="bluetooth">
+<h3>Bluetooth</h3>
+<ul class="simple">
+<li>Added native Bluetooth Controller support. Currently nRF51 &amp; nRF52 are supported.</li>
+<li>New location for Controller &amp; Host implementations: subsys/bluetooth/</li>
+<li>Added raw HCI API to enable physical HCI transport for a Controller-only build.</li>
+<li>Added sample raw HCI apps for USB and UART.</li>
+<li>Added cross-transport pairing support for the Security Manager Protocol.</li>
+<li>Added RFCOMM support (for Bluetooth Classic)</li>
+<li>Added basic persistent storage support (filesystem-backed)</li>
+<li>Renamed bt_driver API to bt_hci_driver, in anticipation of Bluetooth radio drivers.</li>
+</ul>
+</div>
+<div class="section" id="build-infrastructure">
+<h3>Build Infrastructure</h3>
+<ul class="simple">
+<li>Makefile: Changed outdir into board-specific directory to avoid build collisions.</li>
+<li>Makefile: Changed to use HOST_OS environment variable.</li>
+<li>Makefile: Added support for third party build systems.</li>
+<li>Sanity: Added support to filter using environment variables.</li>
+<li>Sanity: Added support for multiple toolchains.</li>
+<li>Sanity: Added ISSM and ARM GCC embedded toolchains to the supported toolchains.</li>
+<li>Sanity: Added extra arguments to be passed to the build.</li>
+<li>Sanity: Removed linker VMA/LMA offset check.</li>
+<li>Sysgen: Added &#8211;kernel_type argument.</li>
+<li>Modified build infrastructure to support unified kernel.</li>
+<li>SDK: Zephyr: Added check for minimum required version.</li>
+<li>Imported get_maintainer.pl from Linux kernel.</li>
+</ul>
+</div>
+<div class="section" id="libraries">
+<h3>Libraries</h3>
+<ul class="simple">
+<li>libc: Added subset of standard types in inttypes.h.</li>
+<li>libc: Added support for &#8216;z&#8217; length specifier.</li>
+<li>libc: Removed stddef.h which is provided by the compiler.</li>
+<li>libc: printf: Improved code for printing.</li>
+<li>printk: Added support for modifiers.</li>
+<li>Added CoAP implementation for Zephyr.</li>
+<li>File system: Added API to grow or shrink a file.</li>
+<li>File system: Added API to get volume statistics.</li>
+<li>File system: Added API to flush cache of an opened file.</li>
+</ul>
+</div>
+<div class="section" id="hals">
+<h3>HALs</h3>
+<ul class="simple">
+<li>QMSI: Updated to version 1.3.1.</li>
+<li>HAL: Imported CC3200 SDK.</li>
+<li>Imported Nordic MDK nRF51 files.</li>
+<li>Imported Kinetis SDK Ethernet phy driver.</li>
+<li>Imported SDK RNGA driver.</li>
+</ul>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation</h3>
+<ul class="simple">
+<li>Drivers: Improved Zephyr Driver model.</li>
+<li>Updated device power management API.</li>
+<li>Unified Kernel primer.</li>
+<li>Moved supported board information to the wiki.zephyrproject.org site.</li>
+<li>Revised documentation for Kernel Event logger and Timing.</li>
+</ul>
+</div>
+<div class="section" id="test-and-samples">
+<h3>Test and Samples</h3>
+<ul class="simple">
+<li>Fixed incorrect printk usage.</li>
+<li>Removed test for dynamic exceptions.</li>
+<li>Added USB sample.</li>
+<li>Added tests and samples for CoAP client and server.</li>
+<li>Added philosophers unified sample.</li>
+<li>Removed printf/printk wrappers.</li>
+<li>Added Unified kernel API samples.</li>
+<li>Imported tinycrypt test cases for CTR, ECC DSA and ECC DH algorithm.</li>
+</ul>
+</div>
+<div class="section" id="deprecations">
+<h3>Deprecations</h3>
+<ul class="simple">
+<li>Deprecated microkernel and nanokernel APIs.</li>
+<li>Removed dynamic IRQs and exceptions.</li>
+<li>Removed Tasks IRQs.</li>
+</ul>
+</div>
+<div class="section" id="jira-related-items">
+<h3>JIRA Related Items</h3>
+<ul class="simple">
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-308">ZEP-308</a> - Build System cleanup and Kernel / Application build separation</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-334">ZEP-334</a> - Unified Kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-766">ZEP-766</a> - USB Mass Storage access to internal filesystem</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1090">ZEP-1090</a> - CPU x86 save/restore using new QMSI bootloader flow</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1173">ZEP-1173</a> - Add support for bonding remove</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-48">ZEP-48</a> - define API for interrupt controllers</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-181">ZEP-181</a> - Persistent storage APIs</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-233">ZEP-233</a> - Support USB mass storage device class</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-237">ZEP-237</a> - Support pre-built host tools</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-240">ZEP-240</a> - printk/printf usage in samples</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-248">ZEP-248</a> - Add a BOARD/SOC porting guide</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-342">ZEP-342</a> - USB DFU</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-451">ZEP-451</a> - Quark SE output by default redirected to IPM</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-521">ZEP-521</a> - ARM - add choice to floating point ABI selection</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-546">ZEP-546</a> - UART interrupts not triggered on ARC</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-584">ZEP-584</a> - warn user if SDK is out of date</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-592">ZEP-592</a> - Sanitycheck support for multiple toolchains</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-605">ZEP-605</a> - SMP over BR/EDR</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-614">ZEP-614</a> - Port tinycrypt 2.0 test cases to Zephyr</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-622">ZEP-622</a> - Add FS API to truncate/shrink a file</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-627">ZEP-627</a> - Port Trickle support from Contiki into current stack</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-635">ZEP-635</a> - Add FS API to grow a file</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-636">ZEP-636</a> - Add FS API to get volume total and free space</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-640">ZEP-640</a> - Remove dynamic IRQs/exceptions from Zephyr</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-653">ZEP-653</a> - QMSI shim driver: Watchdog: Implement suspend and resume callbacks</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-654">ZEP-654</a> - QMSI shim driver: I2C: Implement suspend and resume callbacks</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-657">ZEP-657</a> - QMSI shim driver: AONPT: Implement suspend and resume callbacks</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-661">ZEP-661</a> - QMSI shim driver: SPI: Implement suspend and resume callbacks</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-688">ZEP-688</a> - unify duplicated sections of arch linker scripts</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-715">ZEP-715</a> - Add K64F clock configurations</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-716">ZEP-716</a> - Add Hexiwear board support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-717">ZEP-717</a> - Add ksdk I2C shim driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-718">ZEP-718</a> - Add ksdk ethernet shim driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-721">ZEP-721</a> - Add FXOS8700 accelerometer/magnetometer sensor driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-737">ZEP-737</a> - Update host tools from upstream: fixdep.c</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-740">ZEP-740</a> - PWM API: Check if &#8216;flags&#8217; argument is really required</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-745">ZEP-745</a> - Revisit design of PWM Driver API</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-750">ZEP-750</a> - Arduino 101 board should support one configuration using original bootloader</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-758">ZEP-758</a> - Rename Quark SE Devboard to its official name: Quark SE C1000</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-767">ZEP-767</a> - Add FS API to flush cache of an open file</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-775">ZEP-775</a> - Enable USB CDC by default on Arduino 101 and redirect serial to USB</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-783">ZEP-783</a> - ARM Cortex-M0/M0+ support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-784">ZEP-784</a> - Add support for Nordic Semiconductor nRF51822 SoC</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-850">ZEP-850</a> - remove obsolete boards basic_minuteia and basic_cortex_m3</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-906">ZEP-906</a> - [unified] Add scheduler time slicing support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-907">ZEP-907</a> - Test memory pool support (with mailboxes)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-908">ZEP-908</a> - Add task offload to fiber support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-909">ZEP-909</a> - Adapt tickless idle + power management for ARM</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-910">ZEP-910</a> - Adapt tickless idle for x86</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-912">ZEP-912</a> - Finish renaming kernel object types</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-916">ZEP-916</a> - Eliminate kernel object API anomalies</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-920">ZEP-920</a> - Investigate malloc/free support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-921">ZEP-921</a> - Miscellaneous documentation work</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-922">ZEP-922</a> - Revise documentation for Kernel Event Logger</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-923">ZEP-923</a> - Revise documentation for Timing</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-924">ZEP-924</a> - Revise documentation for Interrupts</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-925">ZEP-925</a> - API changes to message queues</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-926">ZEP-926</a> - API changes to memory pools</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-927">ZEP-927</a> - API changes to memory maps</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-928">ZEP-928</a> - API changes to event handling</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-930">ZEP-930</a> - Cutover to unified kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-933">ZEP-933</a> - Unified kernel ARC port</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-934">ZEP-934</a> - NIOS_II port</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-935">ZEP-935</a> - Kernel logger support (validation)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-954">ZEP-954</a> - Update device PM API to allow setting additional power states</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-957">ZEP-957</a> - Create example sample for new unified kernel API usage</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-959">ZEP-959</a> - sync checkpatch.pl with upstream Linux</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-966">ZEP-966</a> - need support for EM7D SOC on em_starterkit</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-975">ZEP-975</a> - DNS client port to new IP stack</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-981">ZEP-981</a> - Add doxygen documentation to both include/kernel.h and include/legacy.h</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-989">ZEP-989</a> - Cache next ready thread instead of finding out the long way</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-993">ZEP-993</a> - Quark SE (x86): Refactor save/restore execution context feature</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-994">ZEP-994</a> - Quark SE (ARC): Add PMA sample</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-996">ZEP-996</a> - Refactor save/restore feature from i2c_qmsi driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-997">ZEP-997</a> - Refactor save/restore feature from spi_qmsi driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-998">ZEP-998</a> - Refactor save/restore feature from uart_qmsi driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-999">ZEP-999</a> - Refactor save/restore feature from gpio_qmsi driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1000">ZEP-1000</a> - Refactor save/restore feature from rtc_qmsi driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1001">ZEP-1001</a> - Refactor save/restore feature from wdt_qmsi driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1002">ZEP-1002</a> - Refactor save/restore feature from counter_qmsi_aonpt driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1004">ZEP-1004</a> - Extend counter_qmsi_aon driver to support save/restore peripheral context</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1005">ZEP-1005</a> - Extend dma_qmsi driver to support save/restore peripheral context</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1006">ZEP-1006</a> - Extend soc_flash_qmsi driver to support save/restore peripheral context</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1008">ZEP-1008</a> - Extend pwm_qmsi driver to support save/restore peripheral context</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1023">ZEP-1023</a> - workq in Kernel primer for unified kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1030">ZEP-1030</a> - Enable QMSI shim drivers of SoC peripherals on the sensor subsystem</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1043">ZEP-1043</a> - Update QMSI to 1.2</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1045">ZEP-1045</a> - Add/Enhance shim layer to wrap SOC specific PM implementations</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1046">ZEP-1046</a> - Implement RAM sharing between bootloader and Zephyr</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1047">ZEP-1047</a> - Adapt to new PM related boot flow changes in QMSI boot loader</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1106">ZEP-1106</a> - Fix all test failures from TCF</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1107">ZEP-1107</a> - Update QMSI to 1.3</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1109">ZEP-1109</a> - Texas Instruments CC3200 LaunchXL Support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1119">ZEP-1119</a> - move top level usb/ to sys/usb</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1120">ZEP-1120</a> - move top level fs/ to sys/fs</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1121">ZEP-1121</a> - Add config support for enabling SoCWatch in Zephyr</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1140">ZEP-1140</a> - Add a unified kernel version of power_mgr sample app for testing PM code with the new kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1188">ZEP-1188</a> - Add an API to retrieve pending interrupts for wake events</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1191">ZEP-1191</a> - Create wiki page for Hexiwear board</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1235">ZEP-1235</a> - Basic shell support for file system browsing</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1245">ZEP-1245</a> - ARM LTD V2M Beetle Support</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1313">ZEP-1313</a> - porting and user guides must include a security section</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1386">ZEP-1386</a> - Revise power management document to reflect latest changes</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-199">ZEP-199</a> - Zephyr driver model is undocumented</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-436">ZEP-436</a> - Test case tests/kernel/test_mem_safe fails on ARM hardware</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-471">ZEP-471</a> - Ethernet packet with multicast address is not working</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-472">ZEP-472</a> - Ethernet packets are getting missed if sent in quick succession.</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-517">ZEP-517</a> - build on windows failed &#8220;zephyr/Makefile:869: *** multiple target patterns&#8221;</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-528">ZEP-528</a> - ARC has 2 almost identical copies of the linker script</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-577">ZEP-577</a> - Sample application source does not compile on Windows</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-601">ZEP-601</a> - enable CONFIG_DEBUG_INFO</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-602">ZEP-602</a> - unhandled CPU exceptions/interrupts report wrong faulting vector if triggered by CPU</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-615">ZEP-615</a> - Un-supported flash erase size listed in SPI flash w25qxxdv driver header file</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-639">ZEP-639</a> - device_pm_ops structure should be defined as static</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-686">ZEP-686</a> - docs: Info in &#8220;Application Development Primer&#8221; and &#8220;Developing an Application and the Build System&#8221; is largely duplicated</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-698">ZEP-698</a> - samples/task_profiler issues</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-707">ZEP-707</a> - mem_safe test stomps on top of .data and bottom of .noinit</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-724">ZEP-724</a> - build on windows failed: &#8216;make: execvp: uname: File or path name too long&#8217;</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-733">ZEP-733</a> - Minimal libc shouldn&#8217;t be providing stddef.h</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-762">ZEP-762</a> - unexpected &#8220;abspath&#8221; and &#8220;notdir&#8221; from mingw make system</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-777">ZEP-777</a> - samples/driver/i2c_stts751: kconfig build warning from &#8220;select DMA_QMSI&#8221;</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-778">ZEP-778</a> - Samples/drivers/i2c_lsm9ds0: kconfig build warning from &#8220;select DMA_QMSI&#8221;</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-779">ZEP-779</a> - Using current MinGW gcc version 5.3.0 breaks Zephyr build on Windows</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-845">ZEP-845</a> - UART for ARC on Arduino 101 behaves unexpectedly</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-905">ZEP-905</a> - hello_world compilation for arduino_due target fails when using CROSS_COMPILE</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-940">ZEP-940</a> - Fail to get ATT response</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-950">ZEP-950</a> - USB: Device is not listed by USB20CV test suite</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-961">ZEP-961</a> - samples: other cases cannot execute after run aon_counter case</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-967">ZEP-967</a> - Sanity doesnt build &#8216;samples/usb/dfu&#8217; with assertions (-R)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-970">ZEP-970</a> - Sanity doesnt build &#8216;tests/kernel/test_build&#8217; with assertions (-R)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-982">ZEP-982</a> - Minimal libc has EWOULDBLOCK != EAGAIN</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1014">ZEP-1014</a> - [TCF] tests/bluetooth/init build fail</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1025">ZEP-1025</a> - Unified kernel build sometimes breaks on a missing .d dependency file.</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1027">ZEP-1027</a> - Doccumentation for GCC ARM is not accurate</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1031">ZEP-1031</a> - qmsi: dma: driver test fails with LLVM</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1048">ZEP-1048</a> - grove_lcd sample: sample does not work if you disable serial</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1051">ZEP-1051</a> - mpool allocation failed after defrag twice...</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1062">ZEP-1062</a> - Unified kernel isn&#8217;t compatible with CONFIG_NEWLIB_LIBC</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1074">ZEP-1074</a> - ATT retrying misbehaves when ATT insufficient Authentication is received</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1076">ZEP-1076</a> - &#8220;samples/philosophers/unified&#8221; build failed with dynamic stack</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1077">ZEP-1077</a> - &#8220;samples/philosophers/unified&#8221; build warnings with NUM_PHIL&lt;6</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1079">ZEP-1079</a> - Licensing not clear for imported components</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1097">ZEP-1097</a> - ENC28J60 driver fails on concurrent tx and rx</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1098">ZEP-1098</a> - ENC28J60 fails to receive big data frames</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1100">ZEP-1100</a> - Current master still identifies itself as 1.5.0</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1101">ZEP-1101</a> - SYS_KERNEL_VER_PATCHLEVEL() and friends artificially limit version numbers to 4 bits</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1124">ZEP-1124</a> - tests/kernel/test_sprintf/microkernel/testcase.ini#test failure on frdm_k64f</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1130">ZEP-1130</a> - region &#8216;RAM&#8217; overflowed occurs while building test_hmac_prng</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1138">ZEP-1138</a> - Recived packets not being passed to upper layer from IP stack when using ENC28J60 driver</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1139">ZEP-1139</a> - Fix build error when power management is built with unified kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1141">ZEP-1141</a> - Tinycrypt SHA256 test fails with system crash using unified kernel type</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1144">ZEP-1144</a> - Tinycrypt AES128 fixed-key with variable-text test fails using unified kernel type</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1145">ZEP-1145</a> - system hang after tinycrypt HMAC test</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1146">ZEP-1146</a> - zephyrproject.org home page needs technical scrub for 1.6 release</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1149">ZEP-1149</a> - port ztest framework to unified kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1154">ZEP-1154</a> - tests/samples failing with unified kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1155">ZEP-1155</a> - Fix filesystem API namespace</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1163">ZEP-1163</a> - LIB_INCLUDE_DIR is clobbered in Makefile second pass</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1164">ZEP-1164</a> - ztest skip waiting the test case to finish its execution</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1179">ZEP-1179</a> - Build issues when compiling with LLVM from ISSM (icx)</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1182">ZEP-1182</a> - kernel.h doxygen show unexpected &#8220;asm&#8221; blocks</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1183">ZEP-1183</a> - btshell return &#8220;panic: errcode -1&#8221; when init bt</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1195">ZEP-1195</a> - Wrong ATT error code passed to the application</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1199">ZEP-1199</a> - [L2CAP] No credits to receive packet</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1219">ZEP-1219</a> - [L2CAP] Data sent exceeds maximum PDU size</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1221">ZEP-1221</a> - Connection Timeout during pairing</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1226">ZEP-1226</a> - cortex M7 port assembler error</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1227">ZEP-1227</a> - ztest native testing not working in unified kernel</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1232">ZEP-1232</a> - Daily build is failing asserts</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1234">ZEP-1234</a> - Removal of fiber* APIs due to unified migration breaks USB mass storage patchset</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1247">ZEP-1247</a> - Test tests/legacy/benchmark/latency_measure is broken for daily sanitycheck</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1252">ZEP-1252</a> - Test test_chan_blen_transfer does not build for quark_d2000_crb</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1277">ZEP-1277</a> - Flash driver (w25qxxdv) erase function is not checking for offset alignment</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1278">ZEP-1278</a> - Incorrect boundary check in flash driver (w25qxxdv) for erase offset</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1287">ZEP-1287</a> - ARC SPI 1 Port is not working</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1289">ZEP-1289</a> - Race condition with k_sem_take</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1291">ZEP-1291</a> - libzephyr.a dependency on phony &#8220;gcc&#8221; target</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1293">ZEP-1293</a> - ENC28J60 driver doesn&#8217;t work on Arduino 101</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1295">ZEP-1295</a> - incorrect doxygen comment in kernel.h:k_work_pending()</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1297">ZEP-1297</a> - test/legacy/kernel/test_mail: failure on ARC platforms</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1299">ZEP-1299</a> - System can&#8217;t resume completely with DMA suspend and resume operation</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1302">ZEP-1302</a> - ENC28J60 fails with rx/tx of long frames</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1303">ZEP-1303</a> - Configuration talks about &gt;32 thread prios, but the kernel does not support it</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1309">ZEP-1309</a> - ARM uses the end of memory for its init stack</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1310">ZEP-1310</a> - ARC uses the end of memory for its init stack</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1312">ZEP-1312</a> - ARC: software crashed at k_mbox_get() with async sending a message</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1319">ZEP-1319</a> - Zephyr is unable to compile when CONFIG_RUNTIME_NMI is enabled on ARM platforms</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1341">ZEP-1341</a> - power_states test app passes wrong value as power state to post_ops functions</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1343">ZEP-1343</a> - tests/drivers/pci_enum: failing on QEMU ARM and X86 due to missing commit</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1345">ZEP-1345</a> - cpu context save and restore could corrupt stack</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1349">ZEP-1349</a> - ARC sleep needs to pass interrupt priority threshold when interrupts are enabled</li>
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1353">ZEP-1353</a> - FDRM k64f Console output broken on normal flash mode</li>
+</ul>
+</div>
+<div class="section" id="known-issues">
+<h3>Known Issues</h3>
+<ul class="simple">
+<li><a class="reference external" href="https://jira.zephyrproject.org/browse/ZEP-1405">ZEP-1405</a> - function l2cap_br_conn_req in /subsys/bluetooth/host/l2cap_br.c
+references uninitialized pointer</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="LICENSING.html" class="btn btn-neutral float-right" title="Licensing of Zephyr Project components" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contribute/code.html" class="btn btn-neutral" title="Contributing Code" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Intel Corporation, Wind River Systems, Inc.
+      Last updated on Jan 26, 2017.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.6.99',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

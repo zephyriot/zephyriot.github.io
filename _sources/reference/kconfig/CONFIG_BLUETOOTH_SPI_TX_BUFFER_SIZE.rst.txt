@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: BLUETOOTH_SPI_TX_BUFFER_SIZE
+
+.. option:: CONFIG_BLUETOOTH_SPI_TX_BUFFER_SIZE:
+.. _CONFIG_BLUETOOTH_SPI_TX_BUFFER_SIZE:
+
+This option specifies the size of the TX buffer.  Try to keep this
+as small as possible, since it's stored on the stack.
+
+
+
+:Symbol:           BLUETOOTH_SPI_TX_BUFFER_SIZE
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "Transmit buffer length"
+:Default values:
+
+ *  64 (value: "n")
+ *   Condition: (none)
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ BLUETOOTH_HCI && BLUETOOTH && BLUETOOTH_SPI (value: "n")
+:Locations:
+ * ../drivers/bluetooth/hci/Kconfig:152

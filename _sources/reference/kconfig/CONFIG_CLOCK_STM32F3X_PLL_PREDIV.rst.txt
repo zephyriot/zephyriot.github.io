@@ -1,0 +1,38 @@
+:orphan:
+
+.. title:: CLOCK_STM32F3X_PLL_PREDIV
+
+.. option:: CONFIG_CLOCK_STM32F3X_PLL_PREDIV:
+.. _CONFIG_CLOCK_STM32F3X_PLL_PREDIV:
+
+PREDIV is PLLSCR clock signal prescaler, allowed values: 0 - 16.
+
+
+
+:Symbol:           CLOCK_STM32F3X_PLL_PREDIV
+:Type:             int
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [0, 16]
+:Prompts:
+
+ *  "PREDIV1 Prescler" if CLOCK_CONTROL_STM32F3X && CLOCK_STM32F3X_PLL_SRC_HSE (value: "n")
+:Default values:
+
+ *  0 (value: "n")
+ *   Condition: CLOCK_CONTROL_STM32F3X && CLOCK_STM32F3X_PLL_SRC_HSE (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_STM32F3X && CLOCK_CONTROL (value: "n")
+:Locations:
+ * ../drivers/clock_control/Kconfig.stm32f3x:72

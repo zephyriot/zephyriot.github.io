@@ -1,0 +1,39 @@
+:orphan:
+
+.. title:: CLOCK_STM32L4X_PLL_MULTIPLIER
+
+.. option:: CONFIG_CLOCK_STM32L4X_PLL_MULTIPLIER:
+.. _CONFIG_CLOCK_STM32L4X_PLL_MULTIPLIER:
+
+PLL multiplier, allowed values: 2-16. PLL output must not
+exceed 344MHz.
+
+
+
+:Symbol:           CLOCK_STM32L4X_PLL_MULTIPLIER
+:Type:             int
+:Value:            "8"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Ranges:
+
+ *  [8, 86]
+:Prompts:
+
+ *  "PLL multiplier" if CLOCK_CONTROL_STM32L4X && CLOCK_STM32L4X_SYSCLK_SRC_PLL (value: "n")
+:Default values:
+
+ *  20 (value: "n")
+ *   Condition: CLOCK_CONTROL_STM32L4X && CLOCK_STM32L4X_SYSCLK_SRC_PLL (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ SOC_SERIES_STM32L4X && CLOCK_CONTROL (value: "n")
+:Locations:
+ * ../drivers/clock_control/Kconfig.stm32l4x:79

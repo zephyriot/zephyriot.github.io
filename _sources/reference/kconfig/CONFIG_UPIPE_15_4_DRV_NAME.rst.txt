@@ -1,0 +1,33 @@
+:orphan:
+
+.. title:: UPIPE_15_4_DRV_NAME
+
+.. option:: CONFIG_UPIPE_15_4_DRV_NAME:
+.. _CONFIG_UPIPE_15_4_DRV_NAME:
+
+The configuration item CONFIG_UPIPE_15_4_DRV_NAME:
+
+:Symbol:           UPIPE_15_4_DRV_NAME
+:Type:             string
+:Value:            ""
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "UART PIPE Driver name" if UPIPE_15_4 (value: "n")
+:Default values:
+
+ *  "upipe_15_4"
+ *   Condition: UPIPE_15_4 (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/ieee802154/Kconfig:137

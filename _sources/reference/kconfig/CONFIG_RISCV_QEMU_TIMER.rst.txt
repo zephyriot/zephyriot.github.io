@@ -1,0 +1,36 @@
+:orphan:
+
+.. title:: RISCV_QEMU_TIMER
+
+.. option:: CONFIG_RISCV_QEMU_TIMER:
+.. _CONFIG_RISCV_QEMU_TIMER:
+
+This module implements a kernel device driver for the riscv32-qemu
+timer driver. It provides the standard "system clock driver" interfaces.
+
+
+
+:Symbol:           RISCV_QEMU_TIMER
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "riscv-qemu Timer" if SOC_RISCV32_QEMU (value: "n")
+:Default values:
+
+ *  y (value: "y")
+ *   Condition: SOC_RISCV32_QEMU (value: "n")
+:Selects:
+ (no selects)
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/timer/Kconfig:160

@@ -1,0 +1,35 @@
+:orphan:
+
+.. title:: UPIPE_15_4
+
+.. option:: CONFIG_UPIPE_15_4:
+.. _CONFIG_UPIPE_15_4:
+
+The configuration item CONFIG_UPIPE_15_4:
+
+:Symbol:           UPIPE_15_4
+:Type:             bool
+:Value:            "n"
+:User value:       (no user value)
+:Visibility:       "n"
+:Is choice item:   false
+:Is defined:       true
+:Is from env.:     false
+:Is special:       false
+:Prompts:
+
+ *  "UART PIPE fake radio driver support for QEMU" if BOARD_QEMU_X86 (value: "n")
+:Default values:
+
+ *  n (value: "n")
+ *   Condition: BOARD_QEMU_X86 (value: "n")
+:Selects:
+
+ *  :option:`CONFIG_NETWORKING` if BOARD_QEMU_X86 (value: "n")
+ *  :option:`CONFIG_UART_PIPE` if BOARD_QEMU_X86 (value: "n")
+:Reverse (select-related) dependencies:
+ (no reverse dependencies)
+:Additional dependencies from enclosing menus and ifs:
+ (no additional dependencies)
+:Locations:
+ * ../drivers/ieee802154/Kconfig:130
